@@ -26,4 +26,4 @@ by: Stephanie Flora
 git clone repository
 
 ## Bootstrap Starter Template
-Using Aramayis Orkusyan recompiled Bootstrap with a flag set that enables responsive font sizes (ver BootStrab 4.5.2)
+Using Aramayis Orkusyan recompiled Bootstrap with a flag set that enables responsive font sizes (ver BootStrap 4.5.2)
