@@ -1,4 +1,4 @@
-### Mobile Friendly Final project
+# Mobile Friendly Final project
 date: 8 Oct 2020
 by: Stephanie Flora
 
@@ -21,3 +21,9 @@ by: Stephanie Flora
 - [ ] Use at least 4 social media / font awesome icons
 - [ ] Use at least 2 Google Fonts
 - [ ] Customized Contact Form
+
+## To get Started
+git clone repository
+
+Bootstrap Starter Template
+Using Aramayis Orkusyan recompiled Bootstrap with a flag set that enables responsive font sizes (ver BootStrab 4.5.2)
