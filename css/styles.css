@@ -1,0 +1,132 @@
+ :root {
+   --moby_gold: rgb(210,154,25);
+   --nav_blue: rgb(20,14,76);
+   --nav_text: rgb(206,206,206);
+ }
+
+ @font-face {
+	font-family: 'Roboto';                    
+	src: url('..\fonts\Roboto\Roboto-Regular.ttf');
+  }
+
+  @font-face {
+    font-family: 'Shrikhand';                    
+    src: url('..\fonts\Shrikhand\Shrikhand-Regular.ttf');
+  }
+  
+ /* --------------------------------------------------------------------- */
+/* Optional: Makes the sample page fill the window. */
+html, body {
+  height:  100vh;
+  margin:  0;
+  padding: 0;  
+}
+
+.text_colors .nav-link {
+  color: var(--nav_text);
+  font-size: 24px;
+}
+
+.nav-link:hover {
+  background-color: aquamarine;
+  color: #000;
+}
+
+.nav_colors {
+  background-color: var(--nav_blue);
+}
+
+/* https://stackoverflow.com/questions/60611577/how-do-i-make-a-logo-overlap-the-navbar-in-bootstrap */
+.logo {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  border: solid 7px var(--moby_gold);
+  z-index:2;
+}
+
+/* MEDIA SECTION ------------------------------------------------------------------------------------ */
+ /* Extra small devices (portrait phones, less than 576px) */
+ /* No media query for `xs` since this is the default in Bootstrap */
+
+ /* Small devices (landscape phones, 576px and up) */
+ @media (max-width: 576px) { 
+  .text_colors .nav-link {
+    font-size: 14px;
+  }  
+  .logo {
+    width: 50px;
+    border: solid 3px var(--moby_gold);
+  }  
+  .nav_mv_right {
+    margin-left: 65px;
+  }
+  /* .nav_colors {
+    background-color: cyan;
+    color: black;
+  } */
+  /* .logo {
+    display: none;
+  } */
+}
+@media (min-width: 576px) { 
+  .text_colors .nav-link {
+    font-size: 16px;
+  }  
+  /* .nav_colors {
+    background-color: red;
+    color: black;
+  } */
+  /* .logo {
+    display: none;
+  } */
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+  .text_colors .nav-link {
+    font-size: 18px;
+  } 
+   /* .nav_colors {
+    background-color:green;
+    color: black;
+  } */
+  /* .logo {
+    display: block;
+  } */
+ }
+
+ /* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+  .text_colors .nav-link {
+    font-size: 22px;
+  } 
+  /* .nav_colors {
+    background-color: blue;
+    color: black;
+  } */
+  /* .logo {
+    display: block;
+  } */
+}
+
+ /* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+  .text_colors .nav-link {
+    font-size: 24px;
+  } 
+  
+  /* .nav_colors {
+    background-color: yellow;
+    color: black;
+  } */
+  /* .logo {
+    display: block;
+  } */
+ }
+
+@media print {
+  .container {
+      width: auto;
+    }
+}
