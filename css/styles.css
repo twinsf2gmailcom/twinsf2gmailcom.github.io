@@ -1,7 +1,9 @@
  :root {
    --moby_gold2: rgb(210,154,25); 
    --moby_gold:Rgb(223, 177, 79);
-   --nav_blue: rgb(20,14,76);
+   --nav_blue: rgb(20,14,76); 
+   --nav_hover: rgb(80, 65, 211);
+
    --nav_text: rgb(206,206,206);
 
    --body_font: 18px;
@@ -62,8 +64,9 @@ html, body {
 }
 
 /* Navbar link hover color */
-.nav-link:hover {
-  background-color: aquamarine;
+.nav-link:hover, .dropdown-item:hover {
+  background-color: var(--nav_hover);
+  font-weight: 600;
   color: #000;
 }
 
@@ -152,6 +155,11 @@ br {
 /* .row_w_toc {
   font-size: var(--body_font);
 } */
+
+h1 {
+  display: flex;
+  justify-content: center;
+}
 
 .row_w_bg {
   background-color: var(--main_bg);
@@ -312,7 +320,7 @@ br {
     font-size: 24px;
   } 
   .carousel-item {
-    min-height: 800px;
+    min-height: 90vh;
   }
   /* .nav_colors {
     background-color: yellow;
