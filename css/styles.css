@@ -50,6 +50,7 @@ html, body {
   height: 10vh;
   font-size: var(--min_moby_nav_font5: 24px);
 }
+
 /* color of the bavbar */
 .nav_colors {
   background-color: var(--nav_blue);
