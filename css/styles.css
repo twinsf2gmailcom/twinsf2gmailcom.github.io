@@ -4,7 +4,7 @@
    --nav_blue: rgb(20,14,76);
    --nav_text: rgb(206,206,206);
 
-   --body_font: 16px;
+   --body_font: 18px;
 
    --sm_moby_font1: 11px;
    --lg_moby_font1: 11px;
@@ -147,7 +147,12 @@ br {
 }
 
 /* MAIN CONTAIMER seciotn ------------------------------------------------------------------------------------------------ */
-.main_cont {
+/* https://afeld.github.io/bootstrap-toc/ */
+/* .row_w_toc {
+  font-size: var(--body_font);
+} */
+
+.row_w_bg {
   background-color: var(--main_bg);
 }
 
@@ -332,7 +337,9 @@ br {
   .moby_text_logo2 {  
     visibility: hidden;
   }        
-
+  .container {
+    max-width: 1400px;
+  }
  }
 
 @media print {
