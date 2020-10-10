@@ -38,11 +38,12 @@ html, body {
 
 /* https://stackoverflow.com/questions/60611577/how-do-i-make-a-logo-overlap-the-navbar-in-bootstrap */
 .logo {
-  position: absolute;
-  top: 0;
+  /* position: absolute; */
+  /* top: 0; */
   left: 10px;
   border: solid 7px var(--moby_gold);
-  z-index:2;
+  /* z-index:2; */
+  height: auto;
 }
 
 /* MEDIA SECTION ------------------------------------------------------------------------------------ */
@@ -77,9 +78,10 @@ html, body {
     background-color: red;
     color: black;
   } */
-  /* .logo {
-    display: none;
-  } */
+  .logo {
+    width: 70px;
+    border: solid 3px var(--moby_gold);
+  } 
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -91,9 +93,10 @@ html, body {
     background-color:green;
     color: black;
   } */
-  /* .logo {
-    display: block;
-  } */
+  .logo {
+    width: 90px;
+    border: solid 5px var(--moby_gold);
+  } 
  }
 
  /* Large devices (desktops, 992px and up) */
@@ -105,9 +108,10 @@ html, body {
     background-color: blue;
     color: black;
   } */
-  /* .logo {
-    display: block;
-  } */
+  .logo {
+    width: auto;
+    border: solid 5px var(--moby_gold);
+  } 
 }
 
  /* Extra large devices (large desktops, 1200px and up) */
@@ -120,9 +124,10 @@ html, body {
     background-color: yellow;
     color: black;
   } */
-  /* .logo {
-    display: block;
-  } */
+  .logo {
+    width: auto;
+    border: solid 5px var(--moby_gold);
+  } 
  }
 
 @media print {
