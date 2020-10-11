@@ -14,6 +14,12 @@
     <link rel="stylesheet" href="css/bootstrap.min.css"/>
     <!-- https://afeld.github.io/bootstrap-toc/ -->
     <link rel="stylesheet" href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css"/>
+
+    <!-- https://codesource.io/how-to-create-a-lightbox-using-bootstrap/ -->
+    <!-- import css → -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css">
+
     <link rel="stylesheet" href="css/styles.css">
     <title>MOBY</title>
   </head>
@@ -50,14 +56,26 @@
         </ul>
     </div>
     <!-- SECTION ------------------------------------------------- -->
-    <main class="container">
-
-       <p>
-           Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis sequi reprehenderit, animi voluptate veritatis ipsam doloremque doloribus laudantium quia architecto eius ut, nesciunt soluta, dolor consequuntur enim voluptatem aliquam esse. Tempore consequuntur officia rem ipsum, nihil corporis voluptatum necessitatibus minus rerum distinctio nam obcaecati, quae doloremque quas dicta debitis aliquam, numquam quaerat id? Beatae, corporis velit voluptate sint, minima aspernatur cumque assumenda, expedita nemo ducimus delectus. Aliquid illo voluptas explicabo nam dolorum necessitatibus labore quae incidunt. Impedit cupiditate non eveniet ad in accusamus laborum tempora enim sed voluptates necessitatibus illum facere fugiat minus magni animi facilis autem, similique ullam ipsam vitae repellendus. Tempora non cum quibusdam autem, rerum praesentium qui, exercitationem perspiciatis quisquam obcaecati quas vel? Enim, ut quasi voluptatibus, fugiat non fuga molestias veniam sit at ea quis nulla quod maxime magni explicabo nesciunt illo tenetur recusandae eum quisquam numquam cumque. Voluptas, laboriosam, assumenda cupiditate pariatur nam consequuntur corrupti perferendis itaque earum quos, sequi sunt eaque quaerat maiores est optio esse et quidem! Ducimus, qui harum corrupti labore facilis atque eveniet rem quod tempora eligendi, officia voluptas quam laboriosam. Necessitatibus voluptate adipisci, molestias ex officiis sit natus aliquid possimus nobis molestiae! Deleniti laboriosam iure repellendus nisi reprehenderit, maiores non?
-       </p>
-
-    </main>
-    <!-- FOOTER -------------------------------------------------- -->
+    <main class="container-fluid">
+        <h2>Image Gallery</h2>
+        <div class="row">
+          <div class="col-md-4 mt-4">
+            <a href="images/butterfly.jpeg" data-toggle="lightbox" data-gallery="image-gallery" data-title="Flower">
+              <img src="images//butterfly.jpeg" class="img-fluid">
+            </a>
+          </div>
+          <div class="col-md-4 mt-4">
+            <a href="images/flower.jpeg" data-toggle="lightbox" data-gallery="image-gallery" data-title="Coffee">
+              <img src="images/flower.jpeg" class="img-fluid">
+            </a>
+          </div>
+          <div class="col-md-4 mt-4">
+            <a href="images/road.jpeg" data-toggle="lightbox" data-gallery="image-gallery" data-title="Telephone">
+              <img src="images/road.jpeg" class="img-fluid">
+            </a>
+          </div>
+        </div>
+    </main>    <!-- FOOTER -------------------------------------------------- -->
     <footer class="container-fluid">
         <div class="row footer_row d-flex align-items-center justify-content-center pt-4">
             <div class="col-md-3  d-flex align-items-center justify-content-center">
@@ -81,6 +99,21 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     <!-- add after bootstrap.min.js -->
     <script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script>
-v
+ 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(document).on('click', '[data-toggle="lightbox"]', function (event) {
+          event.preventDefault();
+          $(this).ekkoLightbox({
+            alwaysShowClose: true,
+            showArrows: true,
+          });
+        });
+      });
+  
+    </script>
   </body>
 </html>

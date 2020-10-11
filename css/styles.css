@@ -185,6 +185,13 @@ footer.col.p {
   padding: 1vh;
   filter: invert(1);
 }
+/* PHOTOS SECTION -------------------------------------------------------------------------------------- */
+.photo-text {
+  padding-left: 0;  
+  padding-right: 0;
+}
+
+
 /* MEDIA SECTION ------------------------------------------------------------------------------------ */
  /* Extra small devices (portrait phones, less than 576px) */
  /* No media query for `xs` since this is the default in Bootstrap */
@@ -250,6 +257,11 @@ footer.col.p {
     padding: 0;
     font-family: 'Shrikhand';
   }  
+  /* PHOTOS SECTION -------------------------------------------------------------------------------------- */
+  .photo-text {
+    padding-left: 0;  
+    padding-right: 0;
+  }   
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -282,6 +294,11 @@ footer.col.p {
   .moby_text_logo2 {  
     visibility: hidden;
   }    
+  /* PHOTOS SECTION -------------------------------------------------------------------------------------- */
+  .photo-text {
+    padding-left: 5em;  
+    padding-right: 2em;
+  }   
  }
 
  /* Large devices (desktops, 992px and up) */
@@ -312,7 +329,12 @@ footer.col.p {
   /* paragraph tag containing the "MOBY" shuold be hidden for large screens and visible for smaller screens */
   .moby_text_logo2 {  
     visibility: hidden;
-  }      
+  }  
+    /* PHOTOS SECTION -------------------------------------------------------------------------------------- */
+  .photo-text {
+    padding-left: 10em;  
+    padding-right: 5em;
+  }    
 }
 
  /* Extra large devices (large desktops, 1200px and up) */
@@ -347,6 +369,12 @@ footer.col.p {
   .container {
     max-width: 1400px;
   }
+
+  /* PHOTOS SECTION -------------------------------------------------------------------------------------- */
+.photo-text {
+  padding-left: 10em;  
+  padding-right: 10em;
+}
  }
 /* In case you want to print my page - need work */
 @media print {
