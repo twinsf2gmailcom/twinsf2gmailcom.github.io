@@ -46,6 +46,7 @@ html, body {
   padding: 0;  
   font-size: var(--body_font);
   min-width: 350px;
+  scroll-behavior: smooth;
 }
 /* Div with the navbar linnks in it  */
 .nav_container {
@@ -169,7 +170,21 @@ h1 {
   border: solid 4px var(--nav_blue)
 }
 
+/* FOOTER ----------------------------------------------------------------------------------------------------------- */
+.footer_row {
+  background-color: var(--nav_blue);
+  color: var(--nav_text);
+}
 
+footer.col.p {
+  color: #fff;
+}
+
+.socialmedia {
+  height: 5vh;
+  padding: 1vh;
+  filter: invert(1);
+}
 /* MEDIA SECTION ------------------------------------------------------------------------------------ */
  /* Extra small devices (portrait phones, less than 576px) */
  /* No media query for `xs` since this is the default in Bootstrap */
@@ -189,17 +204,12 @@ h1 {
   .carousel-item {
     min-height: 400px;
   }
-
-  /* .nav_colors {
-    background-color: cyan;
-    color: black;
-  } */
-
  /* MOBY text on navbar */
   .div_logo2 p {
     font-size: 16px;
     left: 75px;
   }
+  /* Which text logo is visible */
   .moby_text_logo1 {  
     visibility: hidden;
   }
@@ -219,10 +229,6 @@ h1 {
   .carousel-item {
     min-height: 500px;
   }
-  /* .nav_colors {
-    background-color: red;
-    color: black;
-  } */
   .logo {
     width: 70px;
     border: solid 3px var(--moby_gold);
@@ -232,6 +238,7 @@ h1 {
     font-size: 16px;
     left: 85px;
   }
+  /* Which text logo is visible */
   .moby_text_logo1 {  
     visibility: hidden;
   }
@@ -253,10 +260,6 @@ h1 {
   .carousel-item {
     min-height: 600px;
   }
-    /* .nav_colors {
-    background-color:green;
-    color: black;
-  } */
   .logo {
     width: 90px;
     border: solid 5px var(--moby_gold);
@@ -270,6 +273,7 @@ h1 {
     font-size: var(--sm_moby_font3);
     left: 105px;
   }
+  /* Which text logo is visible */
   .moby_text_logo1 {  
     visibility: visible;
     margin-top: 15px
@@ -288,10 +292,6 @@ h1 {
   .carousel-item {
     min-height: 700px;
   }
-  /* .nav_colors {
-    background-color: blue;
-    color: black;
-  } */
   .logo {
     width: auto;
     border: solid 5px var(--moby_gold);
@@ -304,6 +304,7 @@ h1 {
     font-size: var(--sm_moby_font4);
     left: 155px;
   }
+  /* Which text logo is visible */
   .moby_text_logo1 {  
     visibility: visible;
     margin-top: 7px
@@ -322,10 +323,6 @@ h1 {
   .carousel-item {
     min-height: 90vh;
   }
-  /* .nav_colors {
-    background-color: yellow;
-    color: black;
-  } */
   .logo {
     width: auto;
     border: solid 5px var(--moby_gold);
@@ -338,6 +335,7 @@ h1 {
     font-size: var(--sm_moby_font5);
     left: 155px;
   }
+  /* Which text logo is visible */
   .moby_text_logo1 {  
     visibility: visible;
     margin-top: 0px
@@ -350,9 +348,12 @@ h1 {
     max-width: 1400px;
   }
  }
-
+/* In case you want to print my page - need work */
 @media print {
   .container {
       width: auto;
     }
+
+
+    
 }
