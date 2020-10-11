@@ -1,0 +1,446 @@
+<!-- Basic starter bootstrap code copied from here -->
+<!-- https://getbootstrap.com/docs/4.5/getting-started/introduction/#starter-template -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Stephanie Flora">             <!-- Author (basic name/content that must be added) -->
+    <meta name="description" content="MFW2 final project">
+
+    <!-- Bootstrap CSS -->
+    <!-- Using Aramayis Orkusyan recompiled Bootstrap with a flag set that enables responsive font sizes.  -->
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <!-- https://afeld.github.io/bootstrap-toc/ -->
+    <link rel="stylesheet" href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css"/>
+    <link rel="stylesheet" href="css/styles.css">
+    <title>MOBY</title>
+  </head>
+  <body data-spy="scroll" data-target="#toc">
+    <!-- NAVBAR--------------------------------------------------- -->
+    <div class="div_logo1">
+      <img class="logo position-absolute" src="img/mobylogo_200h.png" alt="MOBY logo">
+    </div>
+    <div class="div_logo2 d-flex align-items-center ">
+       <p class="moby_text_logo1"> <span class="MOBY_text_caps">M</span>arine <span class="MOBY_text_caps">O</span class="MOBY_text_caps">ptical <span class="MOBY_text_caps">B</span>uo<span class="MOBY_text_caps">Y</span></p>
+       <p class="moby_text_logo2">M<br/>O<br/>B<br/>Y</p>
+    </div>    
+    <div class="nav_container nav_colors d-flex align-items-center justify-content-end">
+        <ul class="nav text_colors position-relative nav_mv_right">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#">Status</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#">Location</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Photos</a>
+                <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Divers</a>
+                <a class="dropdown-item" href="#">Deployment</a>
+                <a class="dropdown-item" href="#">On shore</a>
+                <!-- <div class="dropdown-divider"></div> -->
+                <!-- <a class="dropdown-item" href="#">Separated link</a> -->
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!-- CAROUSEL ----------------------------------------------- -->
+    <div id="landingPageCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#landingPageCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#landingPageCarousel" data-slide-to="1"></li>
+        <li data-target="#landingPageCarousel" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active"  id="slide1">
+          <!-- <img class="d-block w-100" src="img/carousel_g0078541.jpg" alt="First slide"> -->
+          <div class="carousel-caption d-none d-md-block">
+            <p class="display-4">MOBY Lanai Cruise 271 on May 2nd 2018</p>
+            <p>MOBY after deployment with divers in diver boat and mooring in the background</p>
+          </div>
+        </div>
+        <div class="carousel-item" id="slide2">
+          <!-- <img class="d-block w-100" src="..." alt="Second slide"> -->
+          <div class="carousel-caption d-none d-md-block">
+            <p class="display-4">MOBY deployment</p>
+            <p>2 cranes on the R/V KOK and a small diver boat are used to deploy the buoy at MOBY site</p>
+          </div>
+        </div>
+        <div class="carousel-item" id="slide3">
+          <!-- <img class="d-block w-100" src="..." alt="Third slide"> -->
+          <div class="carousel-caption d-none d-md-block">
+            <p class="display-4">MOBY Lanai Cruise 271 on May 2nd 2018</p>
+            <p>2 divers attached the cable to the top arm</p>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#landingPageCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#landingPageCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+    <!-- SECTION ------------------------------------------------- -->
+    <main class="container main_cont">
+        <!-- https://afeld.github.io/bootstrap-toc/ -->
+        <!-- Extra row to hold the table of contents and the rows with the different sections -->
+        <div class="row row_w_toc section">
+            <!-- sidebar, which will move to the top on a small screen -->
+            <div class="col-md-2 mt-4">
+                <nav id="toc" data-toggle="toc" class="sticky-top"></nav>
+            </div>
+            <!-- main content area -->
+            <div class="col-md-10">
+                <!-- ------------------------------------------------------------------------------------------------ -->
+                <div class="row my-4 mx-2 pt-4 pb-4 row1 row_w_bg">
+                    <div class="col-md-8">
+                        <h1>Introduction</h1>
+                        <hr>
+                        <p>
+                            The Marine Optical BuoY (MOBY) is a NOAA funded project to provide vicarious calibration of ocean color satellites 
+                            (<a alt="VIIRS/SNPP Ocean Color validation site" href="https://www.star.nesdis.noaa.gov/socd/mecb/color/CalVal.php"  target="_blank">VIIRS/SNPP Ocean Color</a>) 
+                            (Clark et al., 1997).  
+                            MOBY is an autonomus optical buoy which is moored off the island of Lanai in Hawaii.  The system was designed for measuring sunlight incident on and 
+                            scattered out of the ocean. These measurements are provided in near real time for the vicarious calibration procedures conducted by ocean color 
+                            scientists. The development of MOBY began in 1985, followed by deployments of prototypes; first in Monterey Bay (1993) and then in Hawaii (1995). 
+                            The operational version was tested in the fall of 1996 in Hawaii, and MOBY became operational at the Lanai site in July of 1997. MOBY collects data 
+                            on a daily basis. Moss Landing Marine Marine Laboratories (MLML) was selected through a NOAA grant process to participate in the engineering and 
+                            construction of the prototype and opertation version of the system in 1989. Additionally, <a href="https://www.mlml.calstate.edu/"  target="_blank">MLML</a> has had the primary responsibility for 
+                            maintaining, calibrating the buoy and data production of the system.
+                        </p>
+                        <p>
+                            The intent of this site is to provide the background information associated with the system and documentation of the data products 
+                            and parameters collected during the operational period. A complete description of the system and product derivation can be found in the Publications, Papers and Posters
+                            section. The photo gallery will document some of the operations and personnel involved in this project.
+                        </p>
+                    </div>
+                    <div class="col-md-4 d-flex align-items-center justify-content-center">
+                        <figure class="figure">
+                            <img src="img/sm_underwater_moby.jpg" class="figure-img img-fluid rounded" alt="Underwater shot of MOBY and diver from below">
+                            <figcaption class="figure-caption">Figure 1. Underwater shot of MOBY and diver from below</figcaption>
+                        </figure>
+                    </div>
+                </div>
+
+                <!-- ------------------------------------------------------------------------------------------------ -->
+                <div class="row my-4 mx-2 pt-4 pb-4 row1 row_w_bg  section">
+                    <div class="col">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h1>MOBY Measures Color</h1>
+                                <hr>
+                                <p>
+                                    The Marine Optical Buoy (MOBY), a radiometric buoy stationed in the waters off Lanai, Hawaii, is the primary ocean 
+                                    observatory for vicarious calibration of satellite ocean color sensors. MOBY measures light  near the sea surface (1, 5 and 9 meters) 
+                                    off Lanai from July 1997 to the present (over 10 years).  The fundamental satellite measurement on which all ocean color products 
+                                    are derived is the water-leaving spectral radiance, Lwn.   Water-leaving radiance from the ocean contributes only 10% (at most) 
+                                    of the radiance measured by a satellite sensor above the atmosphere (Gordon 1997), a 5% uncertainty in Lwn implies a 0.5% 
+                                    uncertainty in the above-atmosphere radiance measurements.  This level of uncertainty can only be approached using 
+                                    “vicarious-calibration” methods. In practice, this means that the satellite radiance responsivity is adjusted to 
+                                    minimize the differences between an ensemble of satellite and in situ Lwn data matchups. Since late 1996, MOBY has been the 
+                                    primary basis for the on-orbit vicarious calibrations of all US ocean color sensors and numerous international satellite 
+                                    sensors. The MOBY vicarious calibration of these sensors supports the international effort to develop a global, multi-year time series 
+                                    of consistently calibrated ocean color data products.  Without MOBY’s vicarious calibration efforts, SeaWiFS derived 
+                                    values for Lwn would have been in error by 25% at 490nm and 75% at 412 nm [Franz et al. Applied Optics Vol. 46, No. 22, page 5068 – 5082 (2007)]
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12 d-flex align-items-center justify-content-center">
+                                <p>
+                                    Figure 2 shows the surface irradiance (Es) and upwelled radiance (Lu) at 2 depths.  The colorbar at the bottom if Figure 2 
+                                    shows the approximate color of the visible light for each
+                                    wavelength.  The two Lu measurements allow for the calculation of the attenuation coefficent (Kl).
+                                    Kl is then used to extrapolate an Lu measurement to the surface, this new value is called the water leaving radiance (Lw).  Lw is what the satellites measure in orbit and 
+                                    is one of the primary calculated products output by the MOBY team.    
+                                </p>
+                            </div>                            
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 d-flex align-items-center justify-content-center">
+                                <p>
+                                    Figure 3 shows the spectral changes that happen in different water conditions.  The small talbe in the figure shows the Chlorophyll values
+                                    for each data set.  A low value is clear blue water, like Hawaii. A high value is very green or even grown water.
+                                </p>
+                            </div>                            
+                        </div>                        
+                                                
+                        <div class="row mt-4">
+                            <div class="col-md-6 d-flex align-items-center justify-content-center ">
+                                <figure class="figure h-100">
+                                    <img src="img/ocean_optics_Es_lu.png" class="figure-img img-fluid rounded" alt="Examples of the spectral surface irradiance and in-water upwelled radiance measured by MOBY">
+                                    <figcaption class="figure-caption">Figure 2. Examples of the spectral surface irradiance and in-water upwelled radiance measured by MOBY verse wavelength (nm).  The colorbar are the 
+                                        bottom shows the approximate color of each wavelength measured.
+                                    </figcaption>
+                                </figure>
+                            </div>     
+                            <div class="col-md-6 d-flex align-items-center justify-content-center">
+                                <figure class="figure h-100">
+                                    <img src="img/5water_colors.png" class="figure-img img-fluid rounded" alt="Spectral graph of water-leaving radiance in varying water conditions, from blue to green to brown.">
+                                    <figcaption class="figure-caption">Figure 3. Spectral graph of water-leaving radiance in varying water conditions, from blue to green to brown.</figcaption>
+                                </figure>
+                            </div>                                                     
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12 d-flex align-items-center justify-content-center">
+                                <p>
+                                    For comparisons with satellite-borne ocean color instruments, the high-resolution water-leaving radiance spectra
+                                    from MOBY are convolved with the spectral responses of the satellite bands to form band-averaged spectral radiances.
+                                    The figure below shows a 19 year time series of water-leaving radiance for VIIRS-NPP bands, for satellite overpass. Each color
+                                    is a different satellite band.
+                                </p>
+                            </div>                            
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12 d-flex align-items-center justify-content-center">
+                                <figure class="figure">
+                                    <img src="img/viirs-npp_lw_all_good_quest_bands.png" class="figure-img img-fluid rounded" alt="MOBY water leaving radiance timeseries used in vicarious calibrations of ocean color sensors">
+                                    <figcaption class="figure-caption">Figure 4. MOBY water leaving radiance timeseries used in vicarious calibrations of ocean color sensors</figcaption>
+                                </figure>
+                            </div>                            
+                        </div>
+                    </div>
+
+                   
+                </div>
+
+                <!-- ------------------------------------------------------------------------------------------------ -->
+                <div class="row my-4 mx-2 pt-4 pb-4 row1 row_w_bg  section">
+                    <div class="col">
+                        <div class="row">
+                            <div class="col-md-12 col-xl-8">
+                                <h1>Location and Schematics</h1>
+                                <hr>
+                                <p>
+                                   MOBY is located 13 nm from Lanai, Hawaii on the leeward site.  
+                                   MOBY is a spar buoy tethered to a slack-line moored buoy to prevent drifting. MOBY is oriented vertically in the water
+                                   column, extending from the ocean surface to a depth of 12 m at the buoy’s base (Fig. 5 and 6). The surface float for the buoy
+                                   is 1.7 m in diameter with four 40 W solar panels mounted to the central support column. The float houses the
+                                   controlling computers, data storage, electronics, cellular modem, global positioning system receiver, and computer
+                                   battery. Radiometric data are collected using the Marine Optical System (MOS), located in the instrument bay at the
+                                   base of the buoy, along with four 200 A/h marine batteries.
+                                </p>
+
+                                <p>
+                                    MOBY measures the up-welling radiance (Lu’s) and down-welling irradiance (Ed’s) within the ocean using remote
+                                    collectors positioned on three arms oriented perpendicular to the buoy’s central column. The arms can be positioned
+                                    along the central column at varying depths, but are typically positioned at depths of 1 m, 5 m, and 9 m. In addition, the
+                                    incident solar irradiance (Es) is measured 2.5 m above the surface float
+                                </p>
+                            </div>
+                            <div class="col-md-12 col-xl-4 mb-4">
+                                <iframe class="border border-dark" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1609148.755940607!2d-157.6794347050804!3d20.484825967120774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjDCsDQ3JzEyLjkiTiAxNTfCsDE1JzI4LjEiVw!5e0!3m2!1sen!2sus!4v1601011677135!5m2!1sen!2sus" 
+                                width="100%" 
+                                height="100%" 
+                                frameborder="0" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                aria-hidden="false" 
+                                tabindex="0"></iframe>
+                            </div>
+                            
+                        </div>
+
+                        <div class="row mt-4">
+                            <div class="col-md-6 d-flex align-items-center justify-content-center ">
+                                <figure class="figure h-100">
+                                    <img src="img/mooring_schematic.jpg" class="figure-img img-fluid rounded" alt="Schematic showing the slack line mooring attached to railroad wheels and a tether connecting MOBY to the mooring">
+                                    <figcaption class="figure-caption">Figure 5. 
+                                        Schematic showing the slack line mooring attached to railroad wheels and a tether connecting MOBY to the mooring. Using a mooring allows the MOBY buoy to
+                                        be smaller and reduce shadowing effects.
+                                    </figcaption>
+                                </figure>
+                            </div>     
+                            <div class="col-md-6 d-flex align-items-center justify-content-center">
+                                <figure class="figure h-100">
+                                    <img src="img/moby_schematic.jpg" class="figure-img img-fluid rounded" alt=" MOBY schematic showing the main parts of the MOBY buoy.">
+                                    <figcaption class="figure-caption">Figure 6. 
+                                        MOBY schematic showing the main parts of the MOBY buoy.
+                                    </figcaption>
+                                </figure>
+                            </div>                                                     
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- ------------------------------------------------------------------------------------------------ -->
+                <div class="row my-4 mx-2 pt-4 pb-4 row1 row_w_bg  section">
+                    <div class="col">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h1>MOBY Team</h1>
+                                <hr>
+                                <!-- https://getbootstrap.com/docs/4.5/components/card/#card-layout -->
+                                <div class="row row-cols-1 row-cols-md-4">
+                                    <div class="col mb-4">
+                                      <div class="card h-100">
+                                        <img src="img/people_mark.jpg" class="card-img-top" alt="Mark Yarbrough">
+                                        <div class="card-body">
+                                          <h5 class="card-title">Mark Yarbrough</h5>
+                                          <p class="card-text">
+                                            Location: Hawaii<br>
+                                            Title: Principal Investigator
+                                          </p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col mb-4">
+                                      <div class="card h-100">
+                                        <img src="img/people_sandy.jpg" class="card-img-top" alt="Sandy Yarbrough">
+                                        <div class="card-body">
+                                          <h5 class="card-title">Sandy Yarbrough</h5>
+                                          <p class="card-text">
+                                            Location: Hawaii<br>
+                                            Title: Administrative Assistant
+                                        </p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col mb-4">
+                                      <div class="card h-100">
+                                        <img src="img/people_mike.jpg" class="card-img-top" alt="Michael Feinholz">
+                                        <div class="card-body">
+                                          <h5 class="card-title">Michael Feinholz</h5>
+                                          <p class="card-text">
+                                            Location: Hawaii<br>
+                                            Title: co-PI, calibrations and experimental data collection
+                                          </p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col mb-4">
+                                      <div class="card h-100">
+                                        <img src="img/people_terry.jpg" class="card-img-top" alt="Terrence Houlihan">
+                                        <div class="card-body">
+                                          <h5 class="card-title">Terrence Houlihan</h5>
+                                          <p class="card-text">
+                                            Location: Hawaii<br>
+                                            Title:Research Technician
+                                          </p>
+                                        </div>
+                                      </div>
+                                    </div>
+
+                                    <div class="col mb-4">
+                                        <div class="card h-100">
+                                          <img src="img/people_stephanie.jpg" class="card-img-top" alt="Stephanie Flora">
+                                          <div class="card-body">
+                                            <h5 class="card-title">Stephanie Flora</h5>
+                                            <p class="card-text">
+                                                Location: California<br>
+                                                Title: Programmer and data processor
+                                            </p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="col mb-4">
+                                        <div class="card h-100">
+                                          <img src="img/people_darryl.jpg" class="card-img-top" alt="Darryl Peters">
+                                          <div class="card-body">
+                                            <h5 class="card-title">Darryl Peters</h5>
+                                            <p class="card-text">
+                                                Location: California<br>
+                                                Title: Programmer/Diver
+                                            </p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="col mb-4">
+                                        <div class="card h-100">
+                                          <img src="img/people_sean.jpg" class="card-img-top" alt="Sean Mundell">
+                                          <div class="card-body">
+                                            <h5 class="card-title">Sean Mundell</h5>
+                                            <p class="card-text">
+                                                Location: Hawaii<br>
+                                                Title: Research Technician and safety diver
+                                            </p>
+                                          </div>
+                                        </div>
+                                      </div>                                                                                                                
+                                  </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                   
+                </div>
+
+                <!-- ------------------------------------------------------------------------------------------------ -->
+                <div class="row my-4 mx-2 pt-4 pb-4 row1 row_w_bg  section">
+                    <div class="col">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h1>Publications, Papers and Posters</h1>
+                                <hr>
+                                <p>
+                                    Brown, S.W., S.J. Flora, M.E. Feinholz, M.A. Yarbrough, T. Houlihan, D. Peters, Y.S. Kim, J. Mueller, B.C. Johnson, D.K. Clark (2007) 
+                                    <a href="papers/2007_spie_moby-radiometric-calibration-and-uncertainty-budget-2.pdf">The Marine Optical BuoY (MOBY) radiometric calibration and uncertainty budget for ocean color satellite sensor vicarious calibration (PDF)</a>
+                                    Proc. SPIE Optics and Photonics; Sensors, Systems, and Next-Generation Satellites XI. 6744:67441M.
+                                </p>
+                                <hr>
+                                <p>
+                                    Voss, K, B.C. Johnson, M.A. Yarbrough, and A. Gleason (2015) 
+                                    <a href="papers/20150618_kvoss_moby_past_present_and_future.pdf">MOBY-Net, an ocean color vicarious calibration system. (PDF)</a>
+                                    Voss_ESTF_2015 6/15, ESTF, Pasadena, Ca.
+                                </p>
+                                <hr>
+                                <p>
+                                    Yarbrough, M.A., S. Flora, M.E. Feinholz, T. Houlihan, Y.S. Kim, S.W. Brown, B.C. Johnson, K. Voss, and D.K. Clark (2007b) 
+                                    <a href="papers/20070823_spie_sim_final.pdf">Simultaneous measurement of up-welling spectral radiance using a fiber-coupled CCD spectrograph. (PDF)</a>
+                                    Proc. SPIE Coastal Ocean Remote Sensing. 6680:66800J.
+                                </p>
+                                <hr>
+                                <p>
+                                    Clark, D.K, and M.A. Yarbrough (2000). 
+                                    <a href="papers/20001016_poster_clarkmoby_monaco.pdf"></a>A Prototype Fiber Optic Spectrometer System for Limiting Instrument Self‑Shading Uncertainties. (PDF)</a>
+                                    Ocean Optics XV. Monaco, October 16-20.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+    <!-- FOOTER -------------------------------------------------- -->
+    <footer class="container-fluid">
+        <div class="row footer_row d-flex align-items-center justify-content-center pt-4">
+            <div class="col-md-3  d-flex align-items-center justify-content-center">
+                <p>Get connected: 
+                    <img class="socialmedia" src="fonts/facebook-f-brands.svg" alt="Facebook">
+                    <img class="socialmedia" src="fonts/hashtag-solid.svg" alt="hashtag">
+                    <img class="socialmedia" src="fonts/twitter-brands.svg" alt="Twitter">
+                    <img class="socialmedia" src="fonts/snapchat-ghost-brands.svg" alt="snapchat">
+                </p>
+            </div>
+            <div class="col-md-9  d-flex align-items-center justify-content-center">
+                <p>If you have questions or comments contact Stephanie Flora at twinsf2@gmail.com <a href="https://www.mlml.calstate.edu/moby/" target="_blank">(old MOBY site link)</a></p>
+            </div>
+        </div>
+      
+    </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- add after bootstrap.min.js -->
+    <script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script>
+  </body>
+</html>

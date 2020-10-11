@@ -1,34 +1,41 @@
  :root {
-   --moby_gold: rgb(210,154,25);
-   --nav_blue: rgb(20,14,76);
+   --moby_gold2: rgb(210,154,25); 
+   --moby_gold:Rgb(223, 177, 79);
+   --nav_blue: rgb(20,14,76); 
+   --nav_hover: rgb(80, 65, 211);
+
    --nav_text: rgb(206,206,206);
 
-   --sm_moby_font1: 14px;
-   --lg_moby_font1: 14px;
+   --body_font: 18px;
+
+   --sm_moby_font1: 11px;
+   --lg_moby_font1: 11px;
    
-   --sm_moby_font2: 14px;
-   --lg_moby_font2: 14px;
+   --sm_moby_font2: 12px;
+   --lg_moby_font2: 12px;
 
-   --sm_moby_font3: 28px;
-   --lg_moby_font3: 36px;
+   --sm_moby_font3: 22px;
+   --lg_moby_font3: 30px;
 
-   --sm_moby_font4: 36px;
-   --lg_moby_font4: 48px;
+   --sm_moby_font4: 30px;
+   --lg_moby_font4: 42px;
 
-   --sm_moby_font5: 50px;            
-   --lg_moby_font5: 60px;
+   --sm_moby_font5: 48px;            
+   --lg_moby_font5: 58px;
 
    --min_moby_nav_font5: 24px;
+
+   --main_bg: rgb(211,211,211);
   }
 
  @font-face {
 	font-family: 'Roboto';                    
-	src: url('..\fonts\Roboto\Roboto-Regular.ttf');
+	src: url('../fonts/Roboto/Roboto-Regular.ttf');
   }
 
   @font-face {
     font-family: 'Shrikhand';                    
-    src: url('..\fonts\Shrikhand\Shrikhand-Regular.ttf');
+    src: url('../fonts/Shrikhand/Shrikhand-Regular.ttf');
   }
   
  /* --------------------------------------------------------------------- */
@@ -37,12 +44,16 @@ html, body {
   height:  100vh;
   margin:  0;
   padding: 0;  
+  font-size: var(--body_font);
+  min-width: 350px;
+  scroll-behavior: smooth;
 }
 /* Div with the navbar linnks in it  */
 .nav_container {
   height: 10vh;
   font-size: var(--min_moby_nav_font5: 24px);
 }
+
 /* color of the bavbar */
 .nav_colors {
   background-color: var(--nav_blue);
@@ -54,8 +65,9 @@ html, body {
 }
 
 /* Navbar link hover color */
-.nav-link:hover {
-  background-color: aquamarine;
+.nav-link:hover, .dropdown-item:hover {
+  background-color: var(--nav_hover);
+  font-weight: 600;
   color: #000;
 }
 
@@ -89,15 +101,21 @@ html, body {
 .moby_text_logo1 {  
   visibility: hidden;
   font-size: var(--min_moby_font1);
+  font-family: 'Shrikhand';
+  letter-spacing: 3px;
+  font-family: 'Shrikhand';
 }
 /* paragraph tag containing the "MOBY" shuold be hidden for large screens and visible for smaller screens */
 .moby_text_logo2 {  
   visibility: visible;
   font-size: var(--min_moby_font1);
+  font-family: 'Roboto';
+  line-height: 1.1;
+  font-family: 'Shrikhand';
 }
 /*  BR tag making the MOBY text vertical, but I need smaller margins */
 br {
-  display: block;
+  display: inline-block;
   margin: 0 0 0 0;
 }
 
@@ -133,6 +151,40 @@ br {
   background-image: url('../img/carousel_g0048430.jpg');
 }
 
+/* MAIN CONTAIMER seciotn ------------------------------------------------------------------------------------------------ */
+/* https://afeld.github.io/bootstrap-toc/ */
+/* .row_w_toc {
+  font-size: var(--body_font);
+} */
+
+h1 {
+  display: flex;
+  justify-content: center;
+}
+
+.row_w_bg {
+  background-color: var(--main_bg);
+}
+
+.row1 img {
+  border: solid 4px var(--nav_blue)
+}
+
+/* FOOTER ----------------------------------------------------------------------------------------------------------- */
+.footer_row {
+  background-color: var(--nav_blue);
+  color: var(--nav_text);
+}
+
+footer.col.p {
+  color: #fff;
+}
+
+.socialmedia {
+  height: 5vh;
+  padding: 1vh;
+  filter: invert(1);
+}
 /* MEDIA SECTION ------------------------------------------------------------------------------------ */
  /* Extra small devices (portrait phones, less than 576px) */
  /* No media query for `xs` since this is the default in Bootstrap */
@@ -152,17 +204,12 @@ br {
   .carousel-item {
     min-height: 400px;
   }
-
-  /* .nav_colors {
-    background-color: cyan;
-    color: black;
-  } */
-
  /* MOBY text on navbar */
   .div_logo2 p {
     font-size: 16px;
     left: 75px;
   }
+  /* Which text logo is visible */
   .moby_text_logo1 {  
     visibility: hidden;
   }
@@ -171,6 +218,8 @@ br {
     visibility: visible;
   }
 }
+
+
 /* -------------------------------------------------------------------------------------------------------------- */
 /* MEDIA section ------------------------------------------------------------------------------------------------ */
 @media (min-width: 576px) { 
@@ -180,10 +229,6 @@ br {
   .carousel-item {
     min-height: 500px;
   }
-  /* .nav_colors {
-    background-color: red;
-    color: black;
-  } */
   .logo {
     width: 70px;
     border: solid 3px var(--moby_gold);
@@ -193,12 +238,17 @@ br {
     font-size: 16px;
     left: 85px;
   }
+  /* Which text logo is visible */
   .moby_text_logo1 {  
     visibility: hidden;
   }
   /* paragraph tag containing the "MOBY" shuold be hidden for large screens and visible for smaller screens */
   .moby_text_logo2 {  
     visibility: visible;
+    font-size: var(--sm_moby_font1);
+    margin: 0;
+    padding: 0;
+    font-family: 'Shrikhand';
   }  
 }
 
@@ -210,10 +260,6 @@ br {
   .carousel-item {
     min-height: 600px;
   }
-    /* .nav_colors {
-    background-color:green;
-    color: black;
-  } */
   .logo {
     width: 90px;
     border: solid 5px var(--moby_gold);
@@ -221,11 +267,13 @@ br {
   /* MOBY text on navbar */
   .MOBY_text_caps {
     font-size: var(--lg_moby_font3);
-  }
+    color: var(--moby_gold2);
+}
   .div_logo2 p {
     font-size: var(--sm_moby_font3);
     left: 105px;
   }
+  /* Which text logo is visible */
   .moby_text_logo1 {  
     visibility: visible;
     margin-top: 15px
@@ -244,10 +292,6 @@ br {
   .carousel-item {
     min-height: 700px;
   }
-  /* .nav_colors {
-    background-color: blue;
-    color: black;
-  } */
   .logo {
     width: auto;
     border: solid 5px var(--moby_gold);
@@ -260,6 +304,7 @@ br {
     font-size: var(--sm_moby_font4);
     left: 155px;
   }
+  /* Which text logo is visible */
   .moby_text_logo1 {  
     visibility: visible;
     margin-top: 7px
@@ -276,12 +321,8 @@ br {
     font-size: 24px;
   } 
   .carousel-item {
-    min-height: 800px;
+    min-height: 90vh;
   }
-  /* .nav_colors {
-    background-color: yellow;
-    color: black;
-  } */
   .logo {
     width: auto;
     border: solid 5px var(--moby_gold);
@@ -294,18 +335,25 @@ br {
     font-size: var(--sm_moby_font5);
     left: 155px;
   }
+  /* Which text logo is visible */
   .moby_text_logo1 {  
     visibility: visible;
+    margin-top: 0px
   }
   /* paragraph tag containing the "MOBY" shuold be hidden for large screens and visible for smaller screens */
   .moby_text_logo2 {  
     visibility: hidden;
   }        
-
+  .container {
+    max-width: 1400px;
+  }
  }
-
+/* In case you want to print my page - need work */
 @media print {
   .container {
       width: auto;
     }
+
+
+    
 }
