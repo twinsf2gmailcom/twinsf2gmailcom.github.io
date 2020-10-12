@@ -7,6 +7,7 @@
    --nav_text: rgb(206,206,206);
 
    --body_font: 18px;
+   --smr_table_font: 16px;
 
    --sm_moby_font1: 11px;
    --lg_moby_font1: 11px;
@@ -25,8 +26,16 @@
 
    --min_moby_nav_font5: 24px;
 
-   --main_bg: rgb(211,211,211);
+   /* --main_bg: rgb(211,211,211); */
+   --main_bg: rgb(231,231,231);
+
+   /* Status page div colors */
+   --status_color_good: #0f0;
+   --status_color_ok: #ff0;
+   --status_color_bad: #f00;
+   --status_color_neutral: rgb(180,180,180);
   }
+  
 
  @font-face {
 	font-family: 'Roboto';                    
@@ -185,6 +194,49 @@ footer.col.p {
   padding: 1vh;
   filter: invert(1);
 }
+/* PHOTOS SECTION -------------------------------------------------------------------------------------- */
+.photo-text {
+  padding-left: 0;  
+  padding-right: 0;
+}
+
+.photo_img_border {
+  border: solid 4px var(--nav_blue)
+}
+
+/* STATUS SECTION ------------------------------------------------------------------------------------- */
+caption {
+  caption-side: top;
+}
+
+.status_good {
+  background-color: var(--status_color_good);
+  color: #000;
+}
+.status_ok {
+  background-color: var(--status_color_ok);
+  color: #000;
+}
+.status_bad {
+  background-color: var(--status_color_bad);
+  color: #000;
+}
+.status_neutral {
+  background-color: var(--status_color_neutral);
+  color: #000;
+}
+
+.status_table {
+  width: 100%;
+}
+.table_sm_font {
+  font-size:  var(--smr_table_font);
+}
+.table td.fit, 
+.table th.fit {
+    white-space: nowrap;
+    width: 1%;
+}
 /* MEDIA SECTION ------------------------------------------------------------------------------------ */
  /* Extra small devices (portrait phones, less than 576px) */
  /* No media query for `xs` since this is the default in Bootstrap */
@@ -250,6 +302,11 @@ footer.col.p {
     padding: 0;
     font-family: 'Shrikhand';
   }  
+  /* PHOTOS SECTION -------------------------------------------------------------------------------------- */
+  .photo-text {
+    padding-left: 0;  
+    padding-right: 0;
+  }   
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -282,6 +339,11 @@ footer.col.p {
   .moby_text_logo2 {  
     visibility: hidden;
   }    
+  /* PHOTOS SECTION -------------------------------------------------------------------------------------- */
+  .photo-text {
+    padding-left: 5em;  
+    padding-right: 2em;
+  }   
  }
 
  /* Large devices (desktops, 992px and up) */
@@ -312,7 +374,12 @@ footer.col.p {
   /* paragraph tag containing the "MOBY" shuold be hidden for large screens and visible for smaller screens */
   .moby_text_logo2 {  
     visibility: hidden;
-  }      
+  }  
+    /* PHOTOS SECTION -------------------------------------------------------------------------------------- */
+  .photo-text {
+    padding-left: 10em;  
+    padding-right: 5em;
+  }    
 }
 
  /* Extra large devices (large desktops, 1200px and up) */
@@ -347,6 +414,12 @@ footer.col.p {
   .container {
     max-width: 1400px;
   }
+
+  /* PHOTOS SECTION -------------------------------------------------------------------------------------- */
+.photo-text {
+  padding-left: 10em;  
+  padding-right: 10em;
+}
  }
 /* In case you want to print my page - need work */
 @media print {
