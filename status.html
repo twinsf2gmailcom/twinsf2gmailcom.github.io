@@ -1,0 +1,587 @@
+<!-- Basic starter bootstrap code copied from here -->
+<!-- https://getbootstrap.com/docs/4.5/getting-started/introduction/#starter-template -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Stephanie Flora">             <!-- Author (basic name/content that must be added) -->
+    <meta name="description" content="MFW2 final project">
+
+    <!-- Bootstrap CSS -->
+    <!-- Using Aramayis Orkusyan recompiled Bootstrap with a flag set that enables responsive font sizes.  -->
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <!-- https://afeld.github.io/bootstrap-toc/ -->
+    <link rel="stylesheet" href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css"/>
+    <link rel="stylesheet" href="css/styles.css">
+    <title>MOBY</title>
+  </head>
+  <body data-spy="scroll" data-target="#toc">
+    <!-- NAVBAR--------------------------------------------------- -->
+    <div class="div_logo1">
+      <img class="logo position-absolute" src="img/mobylogo_200h.png" alt="MOBY logo">
+    </div>
+    <div class="div_logo2 d-flex align-items-center ">
+       <p class="moby_text_logo1"> <span class="MOBY_text_caps">M</span>arine <span class="MOBY_text_caps">O</span>ptical <span class="MOBY_text_caps">B</span>uo<span class="MOBY_text_caps">Y</span></p>
+       <p class="moby_text_logo2">M<br/>O<br/>B<br/>Y</p>
+    </div>    
+    <div class="nav_container nav_colors d-flex align-items-center justify-content-end">
+        <ul class="nav text_colors position-relative nav_mv_right">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="status.html">Status</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="status.html#location">Location</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="status.html#batteries">Batteries</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown"  role="button" aria-haspopup="true" aria-expanded="false">Photos</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="deploy.html">Deployment</a>
+                  <a class="dropdown-item" href="divers.html">Divers</a>
+                  <!-- <a class="dropdown-item" href="onshore.html">On shore</a> -->
+                <!-- <div class="dropdown-divider"></div> -->
+                <!-- <a class="dropdown-item" href="#">Separated link</a> -->
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!-- SECTION ------------------------------------------------------------------------------------------------------------------------------------- -->
+    <main class="container main_cont">
+        <!-- https://afeld.github.io/bootstrap-toc/ -->
+        <!-- Extra row to hold the table of contents and the rows with the different sections -->
+        <div class="row row_w_toc section">
+          <!-- sidebar, which will move to the top on a small screen -->
+          <div class="col-md-2 mt-4">
+              <nav id="toc" data-toggle="toc" class="sticky-top"></nav>
+          </div>
+          <!-- main content area -->
+          <div class="col-md-10">
+
+            <!-- ------------------------------------------------------------------------------------------------ -->
+            <div class="row my-4 mx-2 pt-4 pb-4 row1 row_w_bg  section">
+              <div class="col">
+                <div class="row">
+                  <div class="col-md-12">
+                      <h1>MOBY Status</h1>
+                      <hr>
+                      <p>
+                          The purpose of this page is to give the status of the currently deployed MOBY buoy.  The first set of colored boxes should give
+                          a good idea of the health of the buoy and if it is working correctly.  Then following graphs give more details.  
+                      </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- ------------------------------------------------------------------------------------------------ -->
+            <div class="row text-center d-flex justify-content-center ">
+              <div class="col-md-2 status_good m-2">
+                <p class="my-2"><strong>MOS TT7</strong><hr>11.1513 V</p> 
+              </div>
+              <div class="col-md-2 status_ok m-2">
+                <p class="my-2"><strong>MOS TT7 Trend</strong><hr>down 0.261 V over 35.0 days</p>
+              </div>
+              <div class="col-md-2 status_neutral m-2">
+                <p class="my-2"><strong>System current</strong><hr>35.3999 amp</p>
+              </div>
+              <div class="col-md-2 status_good m-2">
+                <p class="my-2"><strong>B array temp</strong><hr>-30.8384 C</p>
+              </div>
+              <div class="col-md-2 status_good m-2">
+                <p class="my-2"><strong>R array temp</strong><hr>-33.4096 C</p>
+              </div>
+            </div>
+            <div class="row text-center d-flex justify-content-center ">  
+              <div class="col-md-2 status_good m-2">
+                <p class="my-2"><strong>Total tilt</strong><hr>4.6598 deg</p>
+              </div>
+              <div class="col-md-2 status_good m-2">
+                <p class="my-2"><strong>Rel  Hum</strong><hr>8.7326 %</p>
+              </div>
+              <div class="col-md-2 status_good m-2">
+                <p class="my-2"><strong>MO3 files downloaded</strong><hr>3</p>
+              </div>
+              <div class="col-md-2 status_good m-2">
+                <p class="my-2"><strong>LNX log files downloaded</strong><hr>16</p>
+              </div>
+            </div>
+            <!-- ---------------------------------------------------------------------------------------------- -->
+            <hr>
+            <!-- <p>MOS TT7 Mains voltages from MO3 files for the last day of data</p> -->
+            <table class="table table-hover w-100">
+              <caption>MOS TT7 Mains voltages from MO3 files for the last day of data</caption>
+              <thead class="thead-dark">
+                <tr>
+                  <th class="fit">Measurement</th>
+                  <th class="fit">Last</th>
+                  <th class="fit">1 day mean</th>
+                  <th class="fit">1 day min</th>
+                  <th class="fit">1 day max</th>
+                  <th class="fit">Date</th>
+                </tr>  
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="fit">MOS TT7 Mains Voltage:</td>
+                  <td class="fit">11.6789</td>
+                  <td class="fit">11.6262</td>
+                  <td class="fit">11.5507</td>
+                  <td class="fit">11.7094</td>
+                  <td class="fit">05-Mar-2020 00:37:40</td>
+                </tr>
+              </tbody>
+            </table>
+            <!-- -------------------------------------------------------------------------------------------------- -->
+            <table class="table table-hover w-100 ">
+              <caption>Reading for the last day of the run_mos and batt_maint log files: 05-Mar-2020 18:05:39 to 04-Mar-2020 18:08:37 (1 day).
+              Zero values removed from the battery voltages, Art says it will read "0 volts if a measurement is attempted while the battery is being used for something else" </caption>
+              <thead class="thead-dark">
+                <tr>
+                  <th class="fit">Measurment</th>
+                  <th class="fit">Mean</th>
+                  <th class="fit">Min</th>
+                  <th class="fit">Max</th>
+                  <th class="fit">%std</th>
+                  <th class="fit">comment</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="fit">U0C0, main battery voltage:</td>
+                  <td class="fit">12.2324</td>
+                  <td class="fit">11.73</td>
+                  <td class="fit">12.77</td>
+                  <td class="fit">2.16</td>
+                  <td class="fit"> </td>
+                </tr>
+                <tr>
+                  <td class="fit">U0C7, falcon power supply bus:</td>
+                  <td class="fit">11.957</td>
+                  <td class="fit">11.76</td>
+                  <td class="fit">12.19</td>
+                  <td class="fit">0.67</td>
+                  <td class="fit"> </td>
+                </tr>
+                <tr>
+                  <td class="fit">L0C12, lower battery 1 voltage:</td>
+                  <td class="fit">12.73</td>
+                  <td class="fit">12.71</td>
+                  <td class="fit">12.75</td>
+                  <td class="fit">0.09</td>
+                  <td class="fit"> </td>
+                </tr>
+                <tr>
+                  <td class="fit">L0C13, lower battery 2 voltage:</td>
+                  <td class="fit">12.725</td>
+                  <td class="fit">12.53</td>
+                  <td class="fit">13.13</td>
+                  <td class="fit">1.61</td>
+                  <td class="fit"> </td>
+                </tr>
+                <tr>
+                  <td class="fit">L0C14, lower battery 3 voltage:</td>
+                  <td class="fit">12.752</td>
+                  <td class="fit">12.72</td>
+                  <td class="fit">12.77</td>
+                  <td class="fit">0.10</td>
+                  <td class="fit"> </td>
+                </tr>
+                <tr>
+                  <td class="fit">L0C15, lower battery 4 voltage:</td>
+                  <td class="fit">12.74</td>
+                  <td class="fit">12.62</td>
+                  <td class="fit">12.79</td>
+                  <td class="fit">0.41</td>
+                  <td class="fit"> </td>
+                </tr>
+                <tr>
+                  <td class="fit">U0C1, heatsink temperature:</td>
+                  <td class="fit">25.001</td>
+                  <td class="fit">24.98</td>
+                  <td class="fit">25.02</td>
+                  <td class="fit">0.04</td>
+                  <td class="fit"> </td>
+                </tr>
+                <tr>
+                  <td class="fit">U0C2, case air temperature:</td>
+                  <td class="fit">24.9918</td>
+                  <td class="fit">24.98</td>
+                  <td class="fit">25.01</td>
+                  <td class="fit">0.03</td>
+                  <td class="fit"> </td>
+                </tr>
+                <tr>
+                  <td class="fit">U0C3, case humidity:</td>
+                  <td class="fit">39.1933</td>
+                  <td class="fit">37.41</td>
+                  <td class="fit">41.59</td>
+                  <td class="fit">2.00</td>
+                  <td class="fit"> </td>
+                </tr>
+                <tr>
+                  <td class="fit">U0C4, +5APwr:</td>
+                  <td class="fit">5.0637</td>
+                  <td class="fit">5</td>
+                  <td class="fit">5.08</td>
+                  <td class="fit">0.34</td>
+                  <td class="fit"> </td>
+                </tr>
+                <tr>
+                  <td class="fit">step time server</td>
+                  <td class="fit">-1.2191</td>
+                  <td class="fit">-1.2191</td>
+                  <td class="fit">-1.2191</td>
+                  <td class="fit">0.00</td>
+                  <td class="fit"> </td>
+                </tr>
+              </tbody>
+            </table>
+            <!-- -------------------------------------------------------------------------------------------- -->
+            <table class="table table-hover w-100 table_sm_font">
+              <caption>The last 10 batteries charged and the number of hours of daylight the charging occured in</caption>
+              <thead class="thead-dark">
+                <tr>
+                  <th class="fit">Local Start Time</th>
+                  <th class="fit">Local Stop Time</th>
+                  <th class="fit">Charging Time (mins)</th>
+                  <th class="fit">Battery</th>
+                  <th class="fit">Total Charging</th>
+                  <th class="fit">Daylight Charging</th>
+                  <th class="fit">sum of cos(zen)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                    <td class="fit">03-Mar-2020  2:47:00 PM</td>
+                    <td class="fit">03-Mar-2020  5:08:33 PM</td>
+                    <td class="fit">141.55</td>
+                    <td class="fit">Upper</td>
+                    <td class="fit">2.359</td>
+                    <td class="fit">2.359</td>
+                    <td class="fit">5.655</td>
+                </tr>
+                <tr>
+                    <td class="fit">03-Mar-2020  5:11:09 PM</td>
+                    <td class="fit">03-Mar-2020  6:05:35 PM</td>
+                    <td class="fit">54.43</td>
+                    <td class="fit">Lower 2</td>
+                    <td class="fit">0.907</td>
+                    <td class="fit">0.907</td>
+                    <td class="fit">0.909</td>
+                </tr>
+                <tr>
+                    <td class="fit">03-Mar-2020  6:11:10 PM</td>
+                    <td class="fit">04-Mar-2020  7:05:35 AM</td>
+                    <td class="fit">774.43</td>
+                    <td class="fit">Lower 3</td>
+                    <td class="fit">12.907</td>
+                    <td class="fit">0.745</td>
+                    <td class="fit">0.125</td>
+                </tr>
+                <tr>
+                    <td class="fit">04-Mar-2020  7:11:02 AM</td>
+                    <td class="fit">04-Mar-2020  8:08:37 AM</td>
+                    <td class="fit">57.58</td>
+                    <td class="fit">Upper</td>
+                    <td class="fit">0.960</td>
+                    <td class="fit">0.960</td>
+                    <td class="fit">0.704</td>
+                </tr>
+                <tr>
+                    <td class="fit">04-Mar-2020  8:11:13 AM</td>
+                    <td class="fit">04-Mar-2020 10:44:36 AM</td>
+                    <td class="fit">153.40</td>
+                    <td class="fit">Lower 2</td>
+                    <td class="fit">2.557</td>
+                    <td class="fit">2.557</td>
+                    <td class="fit">6.219</td>
+                </tr>
+                <tr>
+                    <td class="fit">04-Mar-2020 11:45:37 AM</td>
+                    <td class="fit">04-Mar-2020 12:13:34 PM</td>
+                    <td class="fit">27.95</td>
+                    <td class="fit">Lower 2</td>
+                    <td class="fit">0.466</td>
+                    <td class="fit">0.466</td>
+                    <td class="fit">1.745</td>
+                </tr>
+                <tr>
+                    <td class="fit">04-Mar-2020  1:09:32 PM</td>
+                    <td class="fit">04-Mar-2020  1:50:40 PM</td>
+                    <td class="fit">41.13</td>
+                    <td class="fit">Upper</td>
+                    <td class="fit">0.686</td>
+                    <td class="fit">0.686</td>
+                    <td class="fit">2.622</td>
+                </tr>
+                <tr>
+                    <td class="fit">04-Mar-2020  2:46:02 PM</td>
+                    <td class="fit">04-Mar-2020  5:08:19 PM</td>
+                    <td class="fit">142.30</td>
+                    <td class="fit">Upper</td>
+                    <td class="fit">2.372</td>
+                    <td class="fit">2.372</td>
+                    <td class="fit">5.705</td>
+                </tr>
+                <tr>
+                    <td class="fit">04-Mar-2020  5:10:56 PM</td>
+                    <td class="fit">04-Mar-2020  6:05:35 PM</td>
+                    <td class="fit">54.65</td>
+                    <td class="fit">Lower 2</td>
+                    <td class="fit">0.911</td>
+                    <td class="fit">0.911</td>
+                    <td class="fit">0.919</td>
+                </tr>
+                <tr>
+                    <td class="fit">04-Mar-2020  6:11:03 PM</td>
+                    <td class="fit">05-Mar-2020  7:08:07 AM</td>
+                    <td class="fit">777.07</td>
+                    <td class="fit">Upper</td>
+                    <td class="fit">12.951</td>
+                    <td class="fit">0.747</td>
+                    <td class="fit">0.132</td>
+                </tr>
+              </tbody>
+            </table>            
+            <!-- ---------------------------------------------------------------------------------------------------------- -->
+            <table class="table table-hover w-100 table_sm_font">
+              <caption>Batteries selected for the last few files</caption>
+              <thead class="thead-dark">
+                <tr>
+                    <th class="fit">Date (GMT)</th>
+                    <th class="fit">MOBfile</th>
+                    <th class="fit">Battery Used</th>
+                    <th class="fit">MO3 TT7 mains voltage</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                    <td class="fit">28-Feb-2020 23:51:46</td>
+                    <td class="fit">20022823</td>
+                    <td class="fit">1</td>
+                    <td class="fit">11.394</td>
+                </tr>
+                <tr>
+                    <td class="fit">29-Feb-2020 20:41:26</td>
+                    <td class="fit">20022920</td>
+                    <td class="fit">4</td>
+                    <td class="fit">11.913</td>
+                </tr>
+                <tr>
+                    <td class="fit">29-Feb-2020 22:13:44</td>
+                    <td class="fit">20022922</td>
+                    <td class="fit">2</td>
+                    <td class="fit">11.833</td>
+                </tr>
+                <tr>
+                    <td class="fit">29-Feb-2020 23:50:33</td>
+                    <td class="fit">20022923</td>
+                    <td class="fit">2</td>
+                    <td class="fit">11.615</td>
+                </tr>
+                <tr>
+                    <td class="fit">01-Mar-2020 20:41:38</td>
+                    <td class="fit">20030120</td>
+                    <td class="fit">3</td>
+                    <td class="fit">11.850</td>
+                </tr>
+                <tr>
+                    <td class="fit">01-Mar-2020 22:14:35</td>
+                    <td class="fit">20030122</td>
+                    <td class="fit">1</td>
+                    <td class="fit">11.713</td>
+                </tr>
+                <tr>
+                    <td class="fit">01-Mar-2020 23:50:35</td>
+                    <td class="fit">20030123</td>
+                    <td class="fit">1</td>
+                    <td class="fit">11.495</td>
+                </tr>
+                <tr>
+                    <td class="fit">02-Mar-2020 20:41:03</td>
+                    <td class="fit">20030220</td>
+                    <td class="fit">4</td>
+                    <td class="fit">11.828</td>
+                </tr>
+                <tr>
+                    <td class="fit">02-Mar-2020 22:14:51</td>
+                    <td class="fit">20030222</td>
+                    <td class="fit">1</td>
+                    <td class="fit">11.863</td>
+                </tr>
+                <tr>
+                    <td class="fit">02-Mar-2020 23:50:38</td>
+                    <td class="fit">20030223</td>
+                    <td class="fit">1</td>
+                    <td class="fit">11.856</td>
+                </tr>
+                <tr>
+                    <td class="fit">03-Mar-2020 20:42:35</td>
+                    <td class="fit">20030320</td>
+                    <td class="fit">2</td>
+                    <td class="fit">11.952</td>
+                </tr>
+                <tr>
+                    <td class="fit">03-Mar-2020 22:14:35</td>
+                    <td class="fit">20030322</td>
+                    <td class="fit">2</td>
+                    <td class="fit">11.966</td>
+                </tr>
+                <tr>
+                    <td class="fit">03-Mar-2020 23:51:38</td>
+                    <td class="fit">20030323</td>
+                    <td class="fit">2</td>
+                    <td class="fit">11.984</td>
+                </tr>
+                <tr>
+                    <td class="fit">04-Mar-2020 20:44:37</td>
+                    <td class="fit">20030420</td>
+                    <td class="fit">2</td>
+                    <td class="fit">11.753</td>
+                </tr>
+                <tr>
+                    <td class="fit">04-Mar-2020 22:13:34</td>
+                    <td class="fit">20030422</td>
+                    <td class="fit">2</td>
+                    <td class="fit">11.613</td>
+                </tr>
+                <tr>
+                    <td class="fit">04-Mar-2020 23:50:40</td>
+                    <td class="fit">20030423</td>
+                    <td class="fit">4</td>
+                    <td class="fit">11.626</td>
+                </tr>
+              </tbody>
+            </table>            
+          </div>
+          <!-- --------------------------------------------------------------------------------------------------------------------- -->
+          <!-- --------------------------------------------------------------------------------------------------------------------- -->
+          <div class="col-md-10">
+            <!-- ------------------------------------------------------------------------------------------------ -->
+            <div class="row my-4 mx-2 pt-4 pb-4 row1 row_w_bg  section">
+              <div class="col">
+                <div class="row">
+                  <div class="col-md-12">
+                      <h1>Location</h1>
+                      <hr>
+                      <p>
+                          Best guess at MOBY and Mooring current location using all available position data.  Normally Linux Log GPS or XEOS Rover GPS data. 
+                      </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- ----------------------------------------------- -->
+            <div class="col-md-12 d-flex align-items-center justify-content-center">
+              <figure class="figure">
+                  <img src="img/status/nlnx2_09_map1.png" class="figure-img img-fluid rounded" alt="Map of MOBY position with Hawaiian Islands">
+                  <figcaption class="figure-caption">Figure 1. MOBY Position relative to the Hawaiian Islands</figcaption>
+              </figure>
+            </div>
+            <!-- ----------------------------------------------- -->
+            <div class="col-md-12 d-flex align-items-center justify-content-center">
+              <figure class="figure">
+                  <img src="img/status/nlnx2_09_map2.png" class="figure-img img-fluid rounded" alt="Map of MOBY position with Lanai">
+                  <figcaption class="figure-caption">Figure 2. MOBY position zoomed in so only Lanai is visible</figcaption>
+              </figure>
+            </div>
+            <!-- ----------------------------------------------- -->
+            <div class="col-md-12 d-flex align-items-center justify-content-center">
+              <figure class="figure">
+                  <img src="img/status/nlnx2_09_map3.png" class="figure-img img-fluid rounded" alt="Map of MOBY position zoomed in to teh watch circle">
+                  <figcaption class="figure-caption">Figure 3. MOBY position zoomed in so only the watch circle is visible</figcaption>
+              </figure>
+            </div>
+
+
+          </div>
+          <!-- --------------------------------------------------------------------------------------------------------------------- -->
+          <!-- --------------------------------------------------------------------------------------------------------------------- -->
+          <div class="col-md-10">
+            <!-- ------------------------------------------------------------------------------------------------ -->
+            <div class="row my-4 mx-2 pt-4 pb-4 row1 row_w_bg  section">
+              <div class="col">
+                <div class="row">
+                  <div class="col-md-12">
+                      <h1>Batteries</h1>
+                      <hr>
+                      <p>
+                          Battery readings from MOBY data aquisition reading of the lower batteries and the linux log measurements.  A number of batteries are 
+                          measured multiple times a day.  
+                      </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- ----------------------------------------------- -->
+            <div class="col-md-12 d-flex align-items-center justify-content-center">
+              <figure class="figure">
+                  <img src="img/status/nx_020p01_001.png" class="figure-img img-fluid rounded" alt="Upper Battery Battery voltages">
+                  <figcaption class="figure-caption">Figure 4. A compliation of the batt_maint (BML) and run_mos (RML) logs for the U0C0, main battery voltage 
+                    and U0C7, falcon power supply bus. The below graph is every reading from all the BML and RML files. The Main battery voltages are plotted 
+                    for when charge is being provided by the solar panels (Cup) and when charge is being sent to the lower bank (Cdwn). </figcaption>
+              </figure>
+            </div>
+            <!-- ----------------------------------------------- -->
+            <div class="col-md-12 d-flex align-items-center justify-content-center">
+              <figure class="figure">
+                  <img src="img/status/nx_020p08_001.png" class="figure-img img-fluid rounded" alt="Lower Battery voltages">
+                  <figcaption class="figure-caption">Figure 5. This is a plot of the 4 lower batteries measured from a number of sources. The small 
+                    dots are the measurments from the run_mos and batt_maint logs (unloaded) and the largers symbols are from the TT7 main volts saved 
+                    in the MOBY file auxilliary data (loaded MOS running and coolers on). The black lines are the min and max of the voltages in the 
+                    MOBY files. In addition Art saves to the linux log files a print out from MOS of the ADC data. The black star is the TT7 voltage 
+                    (which ever lower battery is selected) unloaded. Which means MOS is on but the coolers are off. There should be two black stars for each 
+                    MOBY file. They are collected at the beginning of aquisition and at the end when the coolers are off. The yellow circles are the MOS ADC 
+                    data after the coolers have been on for 15 minutes.  </figcaption>
+              </figure>
+            </div>            
+            <!-- ----------------------------------------------- -->
+            <div class="col-md-12 d-flex align-items-center justify-content-center">
+              <figure class="figure">
+                  <img src="img/status/nx_020p09_001.png" class="figure-img img-fluid rounded" alt="Differnce in loaded and unloaded battery voltagesLower Battery voltages">
+                  <figcaption class="figure-caption">Figure 6. Art saves to the linux log files a print out from MOS of the ADC data. On the top panel the blue 
+                    circles are the TT7 voltage (which ever lower battery is selected) unloaded, when MOS is first turned on. Which means MOS is on but the coolers 
+                    are off. The yellow circles show the same data but after the coolers have been on for 15 minutes. The red square shows the voltage measured at 
+                    the end of the data aquisition and after the coolers have been turned off. There should be 3 symbols for each MOBY file. The second panel shows 
+                    the differenc between the blue and yellow symbols (unload to loaded or cooler off to on) and the yellow and red symbols (loaded to unloaded or 
+                    coolers on to off).
+                  </figcaption>
+              </figure>
+            </div>  
+          </div>          
+        </div>
+
+      </main>
+      <!-- FOOTER -------------------------------------------------- -->
+      <footer class="container-fluid">
+          <div class="row footer_row d-flex align-items-center justify-content-center pt-4">
+              <div class="col-md-3  d-flex align-items-center justify-content-center">
+                  <p class="my-2">Get connected: 
+                      <img class="socialmedia" src="fonts/facebook-f-brands.svg" alt="Facebook">
+                      <img class="socialmedia" src="fonts/hashtag-solid.svg" alt="hashtag">
+                      <img class="socialmedia" src="fonts/twitter-brands.svg" alt="Twitter">
+                      <img class="socialmedia" src="fonts/snapchat-ghost-brands.svg" alt="snapchat">
+                  </p>
+              </div>
+              <div class="col-md-9  d-flex align-items-center justify-content-center">
+                  <p class="my-2">If you have questions or comments contact Stephanie Flora at twinsf2@gmail.com <a href="https://www.mlml.calstate.edu/moby/" target="_blank">(old MOBY site link)</a></p>
+              </div>
+          </div>
+        
+      </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- add after bootstrap.min.js -->
+    <script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script>
+  </body>
+</html>
