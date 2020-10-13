@@ -237,6 +237,43 @@ caption {
     white-space: nowrap;
     width: 1%;
 }
+
+/* Container holding the image and the text */
+.status_svg_container {
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+  }
+
+  /* Centered text */
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    color: #000;
+  }
+
+.stat_icon {
+    /* position: absolute; */
+    /* top: 0;
+    left: 5px;
+    height: 10vh;
+    padding: 1vh; */
+    opacity: 0.6;
+    filter: invert(1);
+    z-index: 0;
+    height: 15vh;
+}
+
+.stat_icon_rot {
+    rotate: -45deg;
+}
+
+
 /* MEDIA SECTION ------------------------------------------------------------------------------------ */
  /* Extra small devices (portrait phones, less than 576px) */
  /* No media query for `xs` since this is the default in Bootstrap */
