@@ -17,12 +17,6 @@
     <link rel="stylesheet" href="css/bootstrap.min.css"/>
     <!-- https://afeld.github.io/bootstrap-toc/ -->
     <link rel="stylesheet" href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css"/>
-
-    <!-- https://codesource.io/how-to-create-a-lightbox-using-bootstrap/ -->
-    <!-- import css → -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css">
-
     <link rel="stylesheet" href="css/styles.css">
     <title>MOBY</title>
   </head>
@@ -32,7 +26,7 @@
       <img class="logo position-absolute" src="img/mobylogo_200h.png" alt="MOBY logo">
     </div>
     <div class="div_logo2 d-flex align-items-center ">
-       <p class="moby_text_logo1"> <span class="MOBY_text_caps">M</span>arine <span class="MOBY_text_caps">O</span class="MOBY_text_caps">ptical <span class="MOBY_text_caps">B</span>uo<span class="MOBY_text_caps">Y</span></p>
+       <p class="moby_text_logo1"> <span class="MOBY_text_caps">M</span>arine <span class="MOBY_text_caps">O</span>ptical <span class="MOBY_text_caps">B</span>uo<span class="MOBY_text_caps">Y</span></p>
        <p class="moby_text_logo2">M<br/>O<br/>B<br/>Y</p>
     </div>    
     <div class="nav_container nav_colors d-flex align-items-center justify-content-end">
@@ -41,7 +35,7 @@
                 <a class="nav-link" href="index.html">Home</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="#">Status</a>
+              <a class="nav-link" href="status.html">Status</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="status.html#location">Location</a>
@@ -50,11 +44,11 @@
               <a class="nav-link" href="status.html#batteries">Batteries</a>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Photos</a>
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown"  role="button" aria-haspopup="true" aria-expanded="false">Photos</a>
                 <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">Divers</a>
-                <a class="dropdown-item" href="#">Deployment</a>
-                <a class="dropdown-item" href="#">On shore</a>
+                  <a class="dropdown-item" href="deploy.html">Deployment</a>
+                  <a class="dropdown-item" href="divers.html">Divers</a>
+                  <!-- <a class="dropdown-item" href="onshore.html">On shore</a> -->
                 <!-- <div class="dropdown-divider"></div> -->
                 <!-- <a class="dropdown-item" href="#">Separated link</a> -->
                 </div>
@@ -68,31 +62,59 @@
 
         </ul>
     </div>
-    <!-- SECTION ------------------------------------------------- -->
-    <main class="container-fluid">
-        <h2>Image Gallery</h2>
-        <div class="row">
-          <div class="col-md-4 mt-4">
-            <a href="images/butterfly.jpeg" data-toggle="lightbox" data-gallery="image-gallery" data-title="Flower">
-              <img src="images//butterfly.jpeg" class="img-fluid">
-            </a>
-          </div>
-          <div class="col-md-4 mt-4">
-            <a href="images/flower.jpeg" data-toggle="lightbox" data-gallery="image-gallery" data-title="Coffee">
-              <img src="images/flower.jpeg" class="img-fluid">
-            </a>
-          </div>
-          <div class="col-md-4 mt-4">
-            <a href="images/road.jpeg" data-toggle="lightbox" data-gallery="image-gallery" data-title="Telephone">
-              <img src="images/road.jpeg" class="img-fluid">
-            </a>
-          </div>
+    <!-- SECTION ------------------------------------------------------------------------------------------------------------------------------------- -->
+    <main class="container main_cont">
+        <!-- https://afeld.github.io/bootstrap-toc/ -->
+        <!-- Extra row to hold the table of contents and the rows with the different sections -->
+        <div class="row row_w_toc section">
+            <!-- sidebar, which will move to the top on a small screen -->
+            <div class="col-md-2 mt-4">
+                <nav id="toc" data-toggle="toc" class="sticky-top"></nav>
+            </div>
+            <!-- main content area -->
+            <div class="col-md-10">
+                <!-- ------------------------------------------------------------------------------------------------ -->
+                <div class="row my-4 mx-2 pt-4 pb-4 row1 row_w_bg  section" id="armdepth">
+                    <div class="col">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h1>Arm Depth Form</h1>
+                                <hr>
+                                <p>
+                                    This will allow a team member enter the arm depth measurement for a deployment.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ------------------------------------------------------------------------------------------------ -->
+                <div class="row text-center d-flex justify-content-center ">
+                    <div class="col-md-8">
+                        <img class="img-fluid" src="img/form_img/armdepth.jpg" alt="MOBY arm depth image">
+                    </div>
+                    <div class="col-md-4">
+                        <form>
+                            <div class="form-row">
+                                <div class="col">
+                                    <input type="text" class="form-control" placeholder="First name">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col">
+                                    <input type="text" class="form-control" placeholder="Last name">
+                                </div>
+                            </div>
+                        </form>                    
+                    </div>                
+                </div>
+            </div>
         </div>
-    </main>    <!-- FOOTER -------------------------------------------------- -->
+    </main>
+    <!-- FOOTER -------------------------------------------------- -->
     <footer class="container-fluid">
         <div class="row footer_row d-flex align-items-center justify-content-center pt-4">
             <div class="col-md-3  d-flex align-items-center justify-content-center">
-                <p>Get connected: 
+                <p class="my-2">Get connected: 
                     <img class="socialmedia" src="fonts/facebook-f-brands.svg" alt="Facebook">
                     <img class="socialmedia" src="fonts/hashtag-solid.svg" alt="hashtag">
                     <img class="socialmedia" src="fonts/twitter-brands.svg" alt="Twitter">
@@ -100,33 +122,17 @@
                 </p>
             </div>
             <div class="col-md-9  d-flex align-items-center justify-content-center">
-                <p>If you have questions or comments contact Stephanie Flora at myemail@server.email <a href="https://www.mlml.calstate.edu/moby/" target="_blank">(old MOBY site link)</a></p>
+                <p class="my-2">If you have questions or comments contact Stephanie Flora at myemail@server.email <a href="https://www.mlml.calstate.edu/moby/" target="_blank">(old MOBY site link)</a></p>
             </div>
         </div>
-      
+    
     </footer>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
     <!-- add after bootstrap.min.js -->
     <script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script>
- 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
-    <script>
-      $(document).ready(function () {
-        $(document).on('click', '[data-toggle="lightbox"]', function (event) {
-          event.preventDefault();
-          $(this).ekkoLightbox({
-            alwaysShowClose: true,
-            showArrows: true,
-          });
-        });
-      });
-  
-    </script>
   </body>
 </html>
