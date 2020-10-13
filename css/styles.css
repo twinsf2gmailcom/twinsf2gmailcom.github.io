@@ -87,14 +87,14 @@ html, body {
   position: absolute;
   left: 65px;
   top: 0;
-  color: var(--moby_gold)
+  color: var(--moby_gold2)
 }
 /* MOBY image with gold border - overhangs the navbar on the left*/
 .logo {
   position: absolute;
   top: 0;
   left: 10px;
-  border: solid 7px var(--moby_gold);
+  border: solid 7px var(--moby_gold2);
   z-index:2000;
   height: auto;
 }
@@ -104,7 +104,7 @@ html, body {
   position: absolute;
   left: 65px;
   top: 0;
-  color: var(--moby_gold)
+  color: var(--moby_gold2)
 }
 /* paragraph tag containing the "Marine Optical Buoy" shuold be hidden for small screens and visible for larger screens */
 .moby_text_logo1 {  
@@ -248,7 +248,7 @@ caption {
   }  
   .logo {
     width: 60px;
-    border: solid 3px var(--moby_gold);
+    border: solid 3px var(--moby_gold2);
   }  
   .nav_mv_right {
     margin-left: 5px;
@@ -283,7 +283,7 @@ caption {
   }
   .logo {
     width: 70px;
-    border: solid 3px var(--moby_gold);
+    border: solid 3px var(--moby_gold2);
   } 
   /* MOBY text on navbar */
   .div_logo2 p {
@@ -319,7 +319,7 @@ caption {
   }
   .logo {
     width: 90px;
-    border: solid 5px var(--moby_gold);
+    border: solid 5px var(--moby_gold2);
   } 
   /* MOBY text on navbar */
   .MOBY_text_caps {
@@ -356,7 +356,7 @@ caption {
   }
   .logo {
     width: auto;
-    border: solid 5px var(--moby_gold);
+    border: solid 5px var(--moby_gold2);
   } 
   /* MOBY text on navbar */
   .MOBY_text_caps {
@@ -392,7 +392,7 @@ caption {
   }
   .logo {
     width: auto;
-    border: solid 5px var(--moby_gold);
+    border: solid 5px var(--moby_gold2);
   } 
   /* MOBY text on navbar */
   .MOBY_text_caps {
