@@ -22,12 +22,12 @@
   <body data-spy="scroll" data-target="#toc">
     <!-- NAVBAR--------------------------------------------------- -->
     <div class="div_logo1">
-      <img class="logo position-absolute" src="img/mobylogo_200h.png" alt="MOBY logo">
+      <a class="nav-link text_logo px-0" href="index.html"><img class="logo position-absolute" src="img/mobylogo_200h.png" alt="MOBY logo"></a>
     </div>
     <div class="div_logo2 d-flex align-items-center ">
-       <p class="moby_text_logo1"> <span class="MOBY_text_caps">M</span>arine <span class="MOBY_text_caps">O</span>ptical <span class="MOBY_text_caps">B</span>uo<span class="MOBY_text_caps">Y</span></p>
-       <p class="moby_text_logo2">M<br/>O<br/>B<br/>Y</p>
-    </div>    
+      <p class="moby_text_logo1 px-0"><a class="nav-link text_logo px-0" href="index.html"> <span class="MOBY_text_caps">M</span>arine <span class="MOBY_text_caps">O</span>ptical <span class="MOBY_text_caps">B</span>uo<span class="MOBY_text_caps">Y</span></a></p>
+      <p class="moby_text_logo2 px-0"><a class="nav-link text_logo px-0" href="index.html">M<br/>O<br/>B<br/>Y</a></p>
+    </div>   
     <div class="nav_container nav_colors d-flex align-items-center justify-content-end">
         <ul class="nav text_colors position-relative nav_mv_right">
             <li class="nav-item">
@@ -36,12 +36,12 @@
             <li class="nav-item">
               <a class="nav-link" href="status.html">Status</a>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a class="nav-link" href="status.html#location">Location</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="status.html#batteries">Batteries</a>
-            </li>
+            </li> -->
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" data-toggle="dropdown"  role="button" aria-haspopup="true" aria-expanded="false">Photos</a>
                 <div class="dropdown-menu">
@@ -575,6 +575,127 @@
                     coolers on to off).
                   </figcaption>
               </figure>
+            </div>  
+
+            <!-- ------------------------------------------------------------------------------------------------ -->
+            <div class="row my-4 mx-2 pt-4 pb-4 row1 row_w_bg  section">
+              <div class="col">
+                <div class="row">
+                  <div class="col-md-12">
+                      <h1>Linux File Listing</h1>
+                      <hr>
+                      <p>
+                          Status files from the daily operations of the MOBY buoy 
+                      </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- ----------------------------------------------- -->
+            <div class="col-md-12 d-flex align-items-center justify-content-center">
+
+              <div id="accordion">
+                <div class="card">
+                  <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        upload_homeetc.status
+                      </button>
+                    </h5>
+                  </div>
+                  <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                      20200305_180626_UTC Link UP at start of script; starting transfer. <br>
+                      20200305_180626_UTC Uploading bin<br>
+                      20200305_180631_UTC Uploading config<br>
+                      20200305_180636_UTC Uploading log<br>
+                      20200305_180650_UTC Uploading src<br>
+                      20200305_180657_UTC Uploading status                      
+                    </div>
+                  </div>
+                </div>
+                <!-- -------------------------------------------------------------------------------- -->
+                <div class="card">
+                  <div class="card-header" id="headingTwo">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        modem.status
+                      </button>
+                    </h5>
+                  </div>
+                  <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                    <div class="card-body">
+                      20200305_180624_UTC<br>
+                      Power is ON<br>
+                      Link is UP<br>
+                    </div>
+                  </div>
+                </div>
+                <!-- -------------------------------------------------------------------------------- -->
+                <div class="card">
+                  <div class="card-header" id="headingThree">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        session_master.status
+                      </button>
+                    </h5>
+                  </div>
+                  <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                    <div class="card-body">
+                      20200305_180624_UTC Uploading home files
+                    </div>
+                  </div>
+                </div>
+                <!-- -------------------------------------------------------------------------------- -->
+                <div class="card">
+                  <div class="card-header" id="headingFour">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        run_mos.status
+                      </button>
+                    </h5>
+                  </div>
+                  <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                    <div class="card-body">
+                      20200305_180616_UTC Done: No scan definition file /home/user/config/MOSACQ.18
+                    </div>
+                  </div>
+                </div>
+                <!-- -------------------------------------------------------------------------------- -->
+                <div class="card">
+                  <div class="card-header" id="headingFive">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        UADlower1.status
+                      </button>
+                    </h5>
+                  </div>
+                  <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+                    <div class="card-body">
+                      20200305_180616_GMT L1C0, MOS Battery Relay 1 On/Off: [0 0.00] {raw, flag}<br>
+                      20200305_180616_GMT L1C1, MOS Battery Relay 2 On/Off: [0 0.00] {raw, flag}<br>
+                      20200305_180616_GMT L1C2, MOS Battery Relay 3 On/Off: [0 0.00] {raw, flag}<br>
+                      20200305_180616_GMT L1C3, MOS Battery Relay 4 On/Off: [0 0.00] {raw, flag}<br>
+                      20200305_180616_GMT L1C4, BS Battery Relay 1 On/Off: [0 0.00] {raw, flag}<br>
+                      20200305_180616_GMT L1C5, BS Battery Relay 2 On/Off: [0 0.00] {raw, flag}<br>
+                      20200305_180616_GMT L1C6, BS Battery Relay 3 On/Off: [0 0.00] {raw, flag}<br>
+                      20200305_180616_GMT L1C7, BS Battery Relay 4 On/Off: [0 0.00] {raw, flag}<br>
+                      20200305_180616_GMT L1C8, RS Battery Relay 1 On/Off: [0 0.00] {raw, flag}<br>
+                      20200305_180616_GMT L1C9, RS Battery Relay 2 On/Off: [0 0.00] {raw, flag}<br>
+                      20200305_180616_GMT L1C10, RS Battery Relay 3 On/Off: [0 0.00] {raw, flag}<br>
+                      20200305_180616_GMT L1C11, RS Battery Relay 4 On/Off: [0 0.00] {raw, flag}<br>
+                      20200305_180616_GMT L1C12, MOS Interal Relay On/Off: [7 0.00] {raw, flag}<br>
+                      20200305_180616_GMT L1C13, BS  Interal Relay On/Off: [0 0.00] {raw, flag}<br>
+                      20200305_180616_GMT L1C14, RS  Interal Relay On/Off: [0 0.00] {raw, flag}<br>
+                      20200305_180616_GMT L1C15, Relay Reference 5V: [0 0.00] {raw, V}<br>
+                      20200305_180616_GMT Battery in use by MOS:0 Charge:0 BS:0 RS:0
+                    </div>
+                  </div>
+                </div>
+                <!-- -------------------------------------------------------------------------------- -->
+
+
+              </div>               
             </div>  
           </div>          
         </div>
