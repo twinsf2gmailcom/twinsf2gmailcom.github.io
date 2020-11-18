@@ -294,6 +294,10 @@ form label {
 
  /* Small devices (landscape phones, 576px and up) */
  @media (max-width: 576px) { 
+  .nav_container {
+    height: 8vh;
+    font-size: var(--min_moby_nav_font5: 24px);
+  }   
   .text_colors .nav-link {
     font-size: 14px;
   }  
